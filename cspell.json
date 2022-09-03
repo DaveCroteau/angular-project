@@ -1,0 +1,17 @@
+{
+	"version": "0.2",
+	"ignorePaths": [
+		"/src/app/models/dictionary.ts"
+	],
+	"dictionaryDefinitions": [],
+	"dictionaries": [],
+	"words": [
+		"devkit",
+		"fadesidebartext",
+		"fontawesome",
+		"fortawesome",
+		"Topbar"
+	],
+	"ignoreWords": [],
+	"import": []
+}
