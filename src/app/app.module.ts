@@ -18,9 +18,9 @@ import { HomeComponent } from './pages/home/home.component'
 import { AboutComponent } from './pages/about/about.component'
 
 @NgModule({
-	declarations: [AppComponent, SidebarComponent, TopbarComponent, HomeComponent, AboutComponent, TranslatePipe],
-	imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FontAwesomeModule],
-	providers: [],
-	bootstrap: [AppComponent],
+  declarations: [AppComponent, SidebarComponent, TopbarComponent, HomeComponent, AboutComponent, TranslatePipe],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FontAwesomeModule],
+  providers: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

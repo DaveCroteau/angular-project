@@ -1,71 +1,71 @@
 @use '../../../global' as *;
 
 :host {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-	background-color: $dark;
-	color: $light;
+  background-color: $dark;
+  color: $light;
 
-	position: sticky;
-	inset: 0;
+  position: sticky;
+  inset: 0;
 
-	height: $topbar-height;
-	padding-inline: 0.5rem;
+  height: $topbar-height;
+  padding-inline: 0.5rem;
 }
 
 .logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  user-select: none;
 }
 
 .hamburger,
 .gear {
-	font-size: 1.5rem;
-	height: $icon-size;
-	width: $icon-size;
-	cursor: pointer;
+  font-size: 1.5rem;
+  height: $icon-size;
+  width: $icon-size;
+  cursor: pointer;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	&:hover {
-		background-color: $dark-overlay;
-		border-radius: $radius;
-	}
+  &:hover {
+    background-color: $dark-overlay;
+    border-radius: $radius;
+  }
 }
 
 .options {
-	position: absolute;
-	top: $topbar-height;
-	right: 0.2rem;
-	min-width: 5rem;
-	background-color: $accent-dark;
-	border-radius: 0.2rem;
-	box-shadow: $box-shadow;
+  position: absolute;
+  top: $topbar-height;
+  right: 0.2rem;
+  min-width: 5rem;
+  background-color: $accent-dark;
+  border-radius: 0.2rem;
+  box-shadow: $box-shadow;
 
-	li {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 0.5rem;
-		border-radius: $radius;
-		cursor: pointer;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    border-radius: $radius;
+    cursor: pointer;
 
-		&:hover {
-			color: $blue;
-			background-color: $light-overlay;
-		}
+    &:hover {
+      color: $blue;
+      background-color: $light-overlay;
+    }
 
-		h4 {
-			text-transform: uppercase;
-			letter-spacing: 0.05rem;
-			white-space: nowrap;
-		}
-	}
+    h4 {
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      white-space: nowrap;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 <!-- Hamburger & Logo -->
 <div class="logo">
-	<fa-icon class="hamburger" [icon]="faBars" (click)="toggleSidebar()"></fa-icon>
-	<h1>Angular App</h1>
+  <fa-icon class="hamburger" [icon]="faBars" (click)="toggleSidebar()"></fa-icon>
+  <h1>Angular App</h1>
 </div>
 
 <!-- Config -->
@@ -9,7 +9,7 @@
 
 <!-- Options panel -->
 <ul *ngIf="isShowOptions" class="options">
-	<li *ngFor="let lang of langs" (click)="selectLang(lang)">
-		<h4 class="options-lang">{{ lang }}</h4>
-	</li>
+  <li *ngFor="let lang of langs" (click)="selectLang(lang)">
+    <h4 class="options-lang">{{ lang }}</h4>
+  </li>
 </ul>
