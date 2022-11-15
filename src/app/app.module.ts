@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { HttpClientModule } from '@angular/common/http'
 
 // Pipes imports.
 import { TranslatePipe } from './pipes/translate.pipe'
@@ -19,7 +20,7 @@ import { AboutComponent } from './pages/about/about.component'
 
 @NgModule({
   declarations: [AppComponent, SidebarComponent, TopbarComponent, HomeComponent, AboutComponent, TranslatePipe],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FontAwesomeModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
