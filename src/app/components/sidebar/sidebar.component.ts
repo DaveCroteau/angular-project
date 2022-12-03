@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Subscription } from 'rxjs'
-import { UiService } from '../../services/ui/ui.service'
 import { IconDefinition, faHome, faQuestion } from '@fortawesome/free-solid-svg-icons'
-import { fadesidebartext } from '../../animations/fadesidebartext'
+import { UiService } from '@services/ui/ui.service'
+import { fadesidebartext } from '@animations/fadesidebartext'
 
 @Component({
   selector: 'app-sidebar',

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { UiService } from '@services/ui/ui.service'
 
 @Component({
   selector: 'app-about',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  public constructor() {}
+  public constructor(private uiService: UiService) {}
 
   ngOnInit(): void {}
+
+  public onBack(): void {
+    this.uiService.onBack()
+  }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core'
-import { UiService } from '../../services/ui/ui.service'
-import { Languages } from '../../models/dictionary'
 import { IconDefinition, faBars, faGear } from '@fortawesome/free-solid-svg-icons'
+import { UiService } from '@services/ui/ui.service'
+import { Languages } from '@models/dictionary'
 
 @Component({
   selector: 'app-topbar',

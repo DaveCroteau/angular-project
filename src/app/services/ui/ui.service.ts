@@ -1,21 +1,35 @@
-import { Injectable } from '@angular/core'
-import { Observable, Subject } from 'rxjs'
+import { Injectable, OnDestroy } from '@angular/core'
+import { NavigationEnd, Router } from '@angular/router'
+import { Location } from '@angular/common'
+import { Observable, Subject, Subscription, filter } from 'rxjs'
 import { Dictionary, Languages } from 'src/app/models/dictionary'
 
 @Injectable({
   providedIn: 'root',
 })
-export class UiService {
+export class UiService implements OnDestroy {
   /** Language for the app. */
   private _lang: string = ''
+
+  /** Holds the subscriptions */
+  private _subscriptions: Subscription = new Subscription()
+
+  /** Navigation counter */
+  private _navigationCounter: number = 0
 
   /** Control the sidebar size state.  */
   public isFullSizeSidebar: boolean = window.localStorage.getItem('sidebar') === 'closed' ? false : true
   /** Subject for sidebar size. */
   private _sidebarSubject: Subject<boolean> = new Subject<boolean>()
 
-  public constructor() {
+  public constructor(private _router: Router, private _location: Location) {
     this.setLang()
+    this.startNavigationCounter()
+  }
+
+  /** Destroy and Unsubscribe */
+  public ngOnDestroy(): void {
+    this._subscriptions.unsubscribe()
   }
 
   /**
@@ -48,6 +62,24 @@ export class UiService {
       this._lang = browserLang
     } else {
       this._lang = defaultLang
+    }
+  }
+
+  /** Subscribe to the router events update the route counter. */
+  private startNavigationCounter(): void {
+    this._subscriptions.add(
+      this._router.events.pipe(filter((e: any) => e instanceof NavigationEnd)).subscribe((e: NavigationEnd) => this._navigationCounter++),
+    )
+  }
+
+  /** Navigates back into the history */
+  public onBack(): void {
+    this._navigationCounter--
+    if (this._navigationCounter) {
+      this._location.back()
+      this._navigationCounter--
+    } else {
+      this._router.navigateByUrl('')
     }
   }
 
