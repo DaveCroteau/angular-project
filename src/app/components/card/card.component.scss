@@ -1,0 +1,16 @@
+@use '../../../global' as *;
+
+:host {
+	display: block;
+	background-color: $light;
+	color: $accent-dark;
+	padding: 1rem 2rem;
+	margin: 1rem;
+	border-radius: 0.25rem;
+	transition: box-shadow 0.3s ease;
+
+	&:hover {
+		box-shadow: $box-shadow;
+		cursor: pointer;
+	}
+}

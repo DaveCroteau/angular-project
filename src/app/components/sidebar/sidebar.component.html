@@ -1,13 +1,43 @@
 <nav [ngClass]="{ small: !isFullSizeSidebar }">
-  <!-- Home route -->
-  <a routerLink="/home" routerLinkActive="active">
-    <fa-icon [icon]="faHome"></fa-icon>
-    <h4 *ngIf="isFullSizeSidebar" @fadesidebartext>{{ 'home' | translate }}</h4>
-  </a>
+	<!-- Home route -->
+	<a
+		routerLink="/home"
+		routerLinkActive="active"
+	>
+		<fa-icon [icon]="faHome"></fa-icon>
+		<h4
+			*ngIf="isFullSizeSidebar"
+			@fadesidebartext
+		>
+			{{ 'home' | translate }}
+		</h4>
+	</a>
 
-  <!-- About route -->
-  <a routerLink="/about" routerLinkActive="active">
-    <fa-icon [icon]="faQuestion"></fa-icon>
-    <h4 *ngIf="isFullSizeSidebar" @fadesidebartext>{{ 'about' | translate }}</h4>
-  </a>
+	<!-- Posts route -->
+	<a
+		routerLink="/posts"
+		routerLinkActive="active"
+	>
+		<fa-icon [icon]="faPen"></fa-icon>
+		<h4
+			*ngIf="isFullSizeSidebar"
+			@fadesidebartext
+		>
+			{{ 'Posts' }}
+		</h4>
+	</a>
+
+	<!-- About route -->
+	<a
+		routerLink="/about"
+		routerLinkActive="active"
+	>
+		<fa-icon [icon]="faQuestion"></fa-icon>
+		<h4
+			*ngIf="isFullSizeSidebar"
+			@fadesidebartext
+		>
+			{{ 'about' | translate }}
+		</h4>
+	</a>
 </nav>

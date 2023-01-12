@@ -2,55 +2,55 @@
 
 // Component styles
 :host {
-  display: block;
-  background-color: $accent-dark;
-  color: $light;
+	display: block;
+	background-color: $accent-dark;
+	color: $light;
 
-  position: sticky;
-  top: $topbar-height;
-  height: calc(100vh - $topbar-height);
+	position: sticky;
+	top: $topbar-height;
+	height: calc(100vh - $topbar-height);
 }
 
 // Nav styles
 nav {
-  width: 15rem;
-  transition: width 0.5s ease;
+	width: 12rem;
+	transition: width 0.5s ease;
 
-  &.small {
-    width: 3.5rem;
-  }
+	&.small {
+		width: 3.5rem;
+	}
 
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem;
-    border-radius: $radius;
+	a {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 0.5rem;
+		border-radius: $radius;
 
-    transition: 0.2s ease-in;
-    transition-property: background-color, color;
+		transition: 0.2s ease-in;
+		transition-property: background-color, color;
 
-    &.active {
-      background-color: $dark-overlay;
-    }
+		&.active {
+			background-color: $dark-overlay;
+		}
 
-    &:hover {
-      color: $blue;
-      background-color: $light-overlay;
-    }
+		&:hover {
+			color: $blue;
+			background-color: $light-overlay;
+		}
 
-    fa-icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: $icon-size;
-      width: $icon-size;
-    }
+		fa-icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: $icon-size;
+			width: $icon-size;
+		}
 
-    h4 {
-      text-transform: uppercase;
-      letter-spacing: 0.05rem;
-      white-space: nowrap;
-    }
-  }
+		h4 {
+			text-transform: uppercase;
+			letter-spacing: 0.05rem;
+			white-space: nowrap;
+		}
+	}
 }

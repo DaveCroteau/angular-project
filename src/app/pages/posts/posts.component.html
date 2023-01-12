@@ -1,0 +1,7 @@
+<app-card
+	*ngFor="let post of posts$ | async"
+	[cardTitle]="post.title"
+	[cardContent]="post.body"
+	(click)="onClick(post.id)"
+>
+</app-card>

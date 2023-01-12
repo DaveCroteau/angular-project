@@ -1,15 +1,29 @@
 <!-- Hamburger & Logo -->
 <div class="logo">
-  <fa-icon class="hamburger" [icon]="faBars" (click)="toggleSidebar()"></fa-icon>
-  <h1>Angular App</h1>
+	<fa-icon
+		class="hamburger"
+		[icon]="faBars"
+		(click)="toggleSidebar()"
+	></fa-icon>
+	<h1>Angular App</h1>
 </div>
 
 <!-- Config -->
-<fa-icon class="gear" [icon]="faGear" (click)="toggleOptions()"></fa-icon>
+<fa-icon
+	class="gear"
+	[icon]="faGear"
+	(click)="toggleOptions()"
+></fa-icon>
 
 <!-- Options panel -->
-<ul *ngIf="isShowOptions" class="options">
-  <li *ngFor="let lang of langs" (click)="selectLang(lang)">
-    <h4 class="options-lang">{{ lang }}</h4>
-  </li>
+<ul
+	*ngIf="isShowOptions"
+	class="options"
+>
+	<li
+		*ngFor="let lang of langs"
+		(click)="selectLang(lang)"
+	>
+		<h4 class="options-lang">{{ lang }}</h4>
+	</li>
 </ul>
